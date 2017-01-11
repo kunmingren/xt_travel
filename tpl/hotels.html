@@ -1,0 +1,85 @@
+<div class="container" style="margin-bottom: 22px">
+    <div class="container">
+        <div class="row headbar">
+            <span class="col-sm-3 col-xs-12 head-txt">入住日期<input class="head-input" placeholder="MM/DD/YYYY" type="text" id="datepicker"></span>
+            <span class="col-sm-3 col-xs-12 head-txt">退房日期<input class="head-input" placeholder="MM/DD/YYYY" type="text" id="away-datepicker"></span>
+            <span class="col-sm-2 col-xs-6"><input class="head-input" id="hotel-address" placeholder="(选填) 酒店名/位置"></span>
+            <span class="col-sm-1 col-xs-6"><select class="head-input" id="room-number">
+                <option value="1" selected>1间客房</option>
+                <option value="2">2间客房</option>
+                <option value="3">3间客房</option>
+                <option value="4">4间客房</option>
+                <option value="5">5间客房</option>
+            </select></span>
+            <span class="col-sm-1 col-xs-6"><select class="head-input" id="guest-number">
+                <option value="1">1位成人</option>
+                <option value="2" selected>2位成人</option>
+                <option value="3">3位成人</option>
+                <option value="4">4位成人</option>
+                <option value="5">5位成人</option>
+            </select></span>
+            <span class="col-sm-2 col-xs-6"><div class="head-input head-search">搜索</div></span>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12 col-xs-12 condition">
+    <div class="container">
+        <div class="container" style="padding-right: 27px">
+            <div class="" style="border-bottom: 1px dashed #979797;">
+                <div class="headbar2" style="margin-left: -5px">
+                    <span class="col-sm-1 col-xs-4">类型&nbsp;&nbsp;&nbsp;&nbsp;不限</span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">经济型酒店</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">主题酒店</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">公寓</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">豪华酒店</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">客栈</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">青年旅舍</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">度假酒店</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">别墅</label></span>
+                    <span class="col-sm-1 col-xs-4"><label><input type="checkbox" class="condition-input">农家院</label></span>
+                    <!--清除浮动-->
+                    <div class="clearfloat"></div>
+                </div>
+            </div>
+            <div class="headbar2" style="margin-left: -5px">
+                <span class="col-sm-1 col-xs-4">价格&nbsp;&nbsp;&nbsp;&nbsp;不限</span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option1">50元以下
+                </span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option2">50-100元
+                </span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option2">100-150元
+                </span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option2">150-200元
+                </span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option2">200-500元
+                </span>
+                <span class="checkbox-inline col-sm-1 col-xs-4">
+                    <input class="condition-input" type="radio" name="optionsRadiosinline" value="option2">500元以上
+                </span>
+                <span class="col-sm-2 col-xs-8 price">自定义 <input class="price-input"> — <input class="price-input"></span>
+                <!--清除浮动-->
+                <div class="clearfloat"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="search-result">
+        <div>
+            <span>200</span><span>家酒店符合要求</span>
+            <span class="label label-default condition-label"><span>公寓</span><span class="close-btn">×</span></span>
+            <a class="clear-condition">清除所有条件</a>
+        </div>
+        <div>
+            <button class="btn hotel-btn"><span class="glyphicon glyphicon-filter hotel-icon"></span>筛选</button>
+            <button class="btn hotel-btn"><span class="glyphicon glyphicon-sort hotel-icon"></span>排序</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/pages/hotels.js"></script>

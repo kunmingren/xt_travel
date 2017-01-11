@@ -1,0 +1,336 @@
+body {
+    font-family: '黑体','微软雅黑','Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.50;
+    color: #333333;
+    background-color: #eeeeee;
+}
+a {
+    color: #55acee;
+    text-decoration: none;
+}
+a:hover {
+    color: #339BEB;
+    text-decoration: none;
+}
+a:focus, a:active {
+    outline: none;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 30px 0;
+}
+h2 small {
+    font-size: 16px;
+}
+
+
+.main-navigation .navbar-default {
+    background-color: #705f57;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+.main-navigation .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+.main-navigation .navbar-default .navbar-nav > li.active > a {
+    background-color: #5a4b45;
+    color: #ffffff;
+}
+.main-navigation .navbar-default .navbar-nav > li > a:hover,
+.main-navigation .navbar-default .navbar-nav > li.active > a:hover {
+    background-color: #5a4b45;
+    color: #ffffff;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .main-navigation .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-nav {
+        float: left !important;
+    }
+}
+@media (max-width:767px) {
+    .header.navbar-fixed-top {
+        position: absolute;
+    }
+}
+
+.logo {
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+.site-name {
+    float: right;
+    font-size: 14px;
+    margin: 40px 0 10px 10px;
+}
+.swiper-slide {
+    height: 320px;
+    background: url('../../img/banner.jpg'); -webkit-background-size: cover;background-size: cover;
+}
+@media (max-width:414px) {
+    .logo img {
+        height: 60px;
+    }
+    .site-name {
+        margin: 30px 0 10px 10px;
+    }
+    .swiper-slide {
+        height: 200px;
+    }
+}
+@media (max-width:336px) {
+    .logo {
+        margin: 10px 10px 0 0;
+    }
+    .site-name {
+        margin: 0 0 10px 10px;
+    }
+}
+.site-name a {
+    color: #5a4b45;
+}
+.site-slogan {
+    font-size: 12px;
+}
+.has-feedback{
+    cursor: pointer;
+}
+.has-feedback .form-control-feedback {
+    background: #b0988f;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer !important;
+    color: #ffffff;
+}
+
+.tabs {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    clear: both;
+    overflow: hidden;
+    font-size: 16px;
+}
+.tabs li {
+    float: left;
+    padding: 0;
+
+}
+.tabs li a {
+    display: block;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background: #f9faf8;
+    margin-right: 2px;
+    color: #5a4b45;
+    border-bottom: 4px #f9faf8 solid;
+}
+.tabs li a:hover,.tabs li a.active {
+    color: #55acee;
+    border-bottom: 4px #54968f solid;
+}
+
+.thumbnail_more {
+    line-height: 250px;
+    font-size: 20px;
+}
+
+.news {
+    background: #ffffff;
+}
+.media {
+    margin: 20px 0;
+}
+.media-body {
+    margin-top: 10px;
+    padding-right: 0;
+}
+
+#datepicker{
+    margin-left: 15px;
+    padding: 0 15px;
+    width: 60%;
+}
+#away-datepicker{
+    margin-left: 15px;
+    padding: 0 10px;
+    width: 60%;
+}
+.ui-datepicker-trigger{
+    margin-left: -30px;
+}
+.headbar{
+    height: 50px;
+    line-height: 50px;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #705F57;
+    padding: 0 15px;
+}
+.headbar span{
+    padding: 0px;
+}
+.head-txt{
+    font-weight: bold;
+}
+.head-input{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    border-radius: 3px;
+    line-height: 30px;
+    height: 32px;
+}
+#hotel-address{
+    width: 150px;
+    padding: 0 10px;
+}
+#room-number{
+    padding: 0 3px;
+    width: 95%;
+}
+#guest-number{
+    padding: 0 3px;
+    width: 95%;
+}
+
+.head-search{
+    width: 95%;
+    height: 32px;
+    margin-top: 9px;
+    background: #705F57;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+@media (min-width:768px){
+    .head-search {
+        width: 84%;
+    }
+}
+.condition{
+    background: #FFFFFF;
+}
+.headbar2{
+    line-height: 45px;
+    padding: 15px 0;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.clearfloat{
+    clear: both;
+}
+.condition .headbar2 span{
+    height: 45px;
+    line-height: 45px;
+    padding-right: 0;
+    padding-left: 5px;
+    margin-left: 0;
+}
+.condition-input{
+    width: 14px;
+    height: 14px;
+}
+@media (min-width:768px){
+    .condition-input{
+        position: relative;
+        top: 2px;
+    }
+}
+.checkbox-inline{
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+.price-input{
+    width: 50px;
+    height: 22px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .price{
+        position: relative;
+        top: -3px;
+    }
+    .price-input{
+        position: relative;
+        top: 14px;
+    }
+}
+.search-result{
+    padding: 20px 15px;
+    line-height: 50px;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .search-result{
+        line-height: 15px;
+    }
+}
+.condition-label{
+    margin: 0 5px 0 20px;
+    font-size: 14px;
+    padding: .4em .4em .4em;
+}
+.close-btn{
+    margin: 0 0 0 15px;
+    font-weight: 100;
+    font-size: 18px;
+}
+@media(min-width:768px){
+    .condition-label{
+        padding: .6em .6em .6em;
+    }
+    .close-btn{
+        font-size: 22px;
+        cursor: pointer;
+        position: relative;
+        top: 3px;
+    }
+}
+.hotel-btn{
+    color:#705F57;
+    background-color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.hotel-icon{
+    top: 2px;
+    margin-right: 2px;
+}
+
+@media (max-width: 768px) {
+    .hotel-btn{
+        position: relative;
+        top:22px;
+    }
+}
+.clear-condition{
+    cursor: pointer;
+}

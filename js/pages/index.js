@@ -3,34 +3,27 @@
  */
 
 $(function () {
-
-
     $("#navBtn li").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
         $("#reload").load("tpl/"+$(this).attr("id")+".html");
     });
     //获取地址栏的信息
-    var hash = location.hash;
+    var hash = GetRequest("ctl");
+    if(!hash){
+        $("#home").addClass("active").siblings("li").removeClass("active");
+        $("#reload").load("tpl/home.html");
+    }else {
+        $("#"+hash).addClass("active").siblings("li").removeClass("active");
+        $("#reload").load("tpl/"+hash+".html");
+    }
     //switch判断状态
     switch(hash)
     {
-        case "":
-            $("#reload").load("tpl/home.html");
+        case "spot_details":
+            $("#spots").addClass("active").siblings("li").removeClass("active");
             break;
-        case "#home":
-            $("#reload").load("tpl/home.html");
-            break;
-        case "#tickets":
-            $("#reload").load("tpl/tickets.html");
-            break;
-        case "#hotels":
-            $("#reload").load("tpl/hotels.html");
-            break;
-        case "#specialty":
-            $("#reload").load("tpl/specialty.html");
-            break;
-        case "#route":
-            $("#reload").load("tpl/route.html");
+        case "orderList":
+            $(".nav li").removeClass("active");
             break;
     }
 });

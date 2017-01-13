@@ -2,9 +2,10 @@ body {
     font-family: '黑体','微软雅黑','Open Sans', sans-serif;
     font-size: 14px;
     line-height: 1.50;
-    color: #333333;
     background-color: #eeeeee;
+    color: #705F57;
 }
+.no-padding {padding:0!important;}
 a {
     color: #55acee;
     text-decoration: none;
@@ -25,7 +26,130 @@ h2 small {
     font-size: 16px;
 }
 
+.btn-commom {
+    color: #fff;
+    background-color: #705F57;
+    padding: 10px 30px;
+    border: 0;
+}
+.btn-commom:hover,
+.btn-commom:focus,
+.btn-commom.focus,
+.btn-commom:active,
+.btn-commom.active,
+.open > .dropdown-toggle.btn-commom {
+    color: #fff;
+    background-color: #54453e;
+    border: 0;
+}
+.btn-commom:active,
+.btn-commom.active,
+.open > .dropdown-toggle.btn-commom {
+    background-image: none;
+}
+.btn-commom.disabled,
+.btn-commom[disabled],
+fieldset[disabled] .btn-commom,
+.btn-commom.disabled:hover,
+.btn-commom[disabled]:hover,
+fieldset[disabled] .btn-commom:hover,
+.btn-commom.disabled:focus,
+.btn-commom[disabled]:focus,
+fieldset[disabled] .btn-commom:focus,
+.btn-commom.disabled.focus,
+.btn-commom[disabled].focus,
+fieldset[disabled] .btn-commom.focus,
+.btn-commom.disabled:active,
+.btn-commom[disabled]:active,
+fieldset[disabled] .btn-commom:active,
+.btn-commom.disabled.active,
+.btn-commom[disabled].active,
+fieldset[disabled] .btn-commom.active {
+    background-color: #7b6b62;
+    border: 0;
+}
+.btn-commom .badge {
+    color: #705F57;
+    background-color: #fff;
+}
 
+.nav-tabs {
+    border-bottom: 1px solid #c8c1b9;
+    margin-right: 3px;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border-bottom: 1px solid #c8c1b9;
+    border-radius: 4px 4px 0 0;
+    background: #ffffff;
+    padding: 15px 20px;
+}
+@media (max-width:320px) {
+    .nav-tabs > li > a {
+        padding: 10px;
+    }
+}
+.nav-tabs > li > a:hover {
+    border-color: #e5e1dc #e5e1dc #c8c1b9 #d6d2cf;
+    background: #ffffff;
+    cursor: pointer;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #705F57;
+    background-color: #fff;
+    border: 1px solid #c8c1b9;
+    border-bottom-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/* index */
+/* header */
+.logo {
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+.site-name {
+    float: right;
+    font-size: 14px;
+    margin: 40px 0 10px 10px;
+}
+@media (max-width:414px) {
+    .logo img {
+        height: 60px;
+    }
+    .site-name {
+        margin: 30px 0 10px 10px;
+    }
+    .swiper-slide {
+        height: 200px;
+    }
+}
+@media (max-width:319px) {
+    .logo {
+        margin: 10px 10px 0 0;
+    }
+    .site-name {
+        margin: 0 0 10px 10px;
+    }
+}
+.site-name a {
+    color: #5a4b45;
+}
+.site-slogan {
+    font-size: 12px;
+}
+/* nav */
 .main-navigation .navbar-default {
     background-color: #705f57;
     border: none;
@@ -33,7 +157,6 @@ h2 small {
     -moz-border-radius: 0;
     border-radius: 0;
     overflow: hidden;
-    margin-bottom: 22px;
 }
 .main-navigation .navbar-default .navbar-nav > li > a {
     color: #fff;
@@ -49,7 +172,6 @@ h2 small {
     background-color: #5a4b45;
     color: #ffffff;
 }
-
 @media (min-width:768px) and (max-width:991px) {
     .main-navigation .container-fluid {
         padding-left: 0;
@@ -64,45 +186,6 @@ h2 small {
         position: absolute;
     }
 }
-
-.logo {
-    float: left;
-    margin: 10px 10px 10px 0;
-}
-.site-name {
-    float: right;
-    font-size: 14px;
-    margin: 40px 0 10px 10px;
-}
-.swiper-slide {
-    height: 320px;
-    background: url('../../img/banner.jpg'); -webkit-background-size: cover;background-size: cover;
-}
-@media (max-width:414px) {
-    .logo img {
-        height: 60px;
-    }
-    .site-name {
-        margin: 30px 0 10px 10px;
-    }
-    .swiper-slide {
-        height: 200px;
-    }
-}
-@media (max-width:336px) {
-    .logo {
-        margin: 10px 10px 0 0;
-    }
-    .site-name {
-        margin: 0 0 10px 10px;
-    }
-}
-.site-name a {
-    color: #5a4b45;
-}
-.site-slogan {
-    font-size: 12px;
-}
 .has-feedback{
     cursor: pointer;
 }
@@ -114,7 +197,12 @@ h2 small {
     cursor: pointer !important;
     color: #ffffff;
 }
-
+/* banner */
+.swiper-slide {
+    height: 320px;
+    background: url('../../img/banner.jpg'); -webkit-background-size: cover;background-size: cover;
+}
+/* home */
 .tabs {
     list-style: none;
     width: 100%;
@@ -143,12 +231,10 @@ h2 small {
     color: #55acee;
     border-bottom: 4px #54968f solid;
 }
-
 .thumbnail_more {
     line-height: 250px;
     font-size: 20px;
 }
-
 .news {
     background: #ffffff;
 }
@@ -159,6 +245,170 @@ h2 small {
     margin-top: 10px;
     padding-right: 0;
 }
+
+/* spots */
+ .well{
+    position: relative;
+    border: none;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 40px 15px 10px 15px;
+    -webkit-box-shadow:none;
+}
+ .ticket_title{
+    width: 100px;
+    height: 40px;
+    text-indent: 7px;
+    line-height: 40px;
+    background: url("../../img/title_bg.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top:-30px;
+    color: #fff;
+    left: -10px;
+    font-size: 16px;
+}
+.spots .ticket_pic{
+    height: 270px;
+    overflow: hidden;
+}
+.spots .ticket_pic .thumbnail{
+    border: 0;
+    padding: 0;
+}
+.spots .ticket_pic .col-md-4{
+    margin-left: -25px
+}
+.spots .ticket_pic .col-md-8 {
+    padding-left: 0;
+}
+.spots .ticket_pic .col-md-8 img{
+    width: 420px;
+    height: 275px
+}
+.spots .ticket_pic .col-md-4 {
+    padding-right: 0;
+}
+.spots .ticket_pic .col-md-4 img{
+    width: 210px;
+    height: 136px
+}
+.spots .ticket_pic .col-md-8 .thumbnail,.ticket_pic .col-md-4 .thumbnail{
+    margin-bottom:5px;
+}
+@media (max-width:767px) {
+    .spots .ticket_pic .col-md-8 {
+        padding-right: 0;
+    }
+}
+@media (max-width:414px) {
+    .spots .ticket_pic{
+        height: 200px;
+        overflow: hidden;
+    }
+    .spots .ticket_pic .col-md-8 {
+        padding-right: 0;
+    }
+    .spots .ticket_pic .col-md-8 img{
+        height: 200px;
+    }
+}
+@media (max-width:320px) {
+    .spots .ticket_pic{
+        height: 170px;
+        overflow: hidden;
+    }
+    .spots .ticket_pic .col-md-8 {
+        padding-right: 0;
+    }
+    .spots .ticket_pic .col-md-8 img{
+        height: 170px;
+    }
+}
+.spotName {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.order_btn{
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+.spotScore * {
+    width: 15px;
+    height: 15px;
+    float: left;
+}
+.spotScore span {
+    color: #F6A623;
+    width: 30px;
+    text-align: center;
+    line-height: 16px;
+}
+
+
+/* spot_details */
+.spot_details .spotImg a img {
+    height: 275px;
+    margin: 0 auto;
+}
+@media (max-width:414px) {
+    .spot_details .spotImg a img {
+        height: 200px;
+    }
+    .spot_details .col-sm-6 {
+        padding: 0;
+    }
+}
+@media (max-width:320px) {
+    .spot_details .spotImg a img {
+        height: 170px;
+    }
+    .spot_details .col-sm-6 {
+        padding: 0;
+    }
+}
+.spot_details .voice {
+    float: left;
+    color: #705F57;
+    margin-bottom: 10px;
+}
+.spot_details .voicePlay {
+    float: right;
+    background: #705F57;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.spot_details .box-body {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #c8c1b9;
+    border-top: 0;
+    -webkit-border-radius: 0 4px 4px 4px;
+    -moz-border-radius: 0 4px 4px 4px;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+}
+.spot_details .box-body:nth-child(1) {
+    display: block;
+}
+.spot_details .box-body p {
+    text-indent: 30px;
+}
+.spot_details .box-body img {
+    margin: 10px auto;
+}
+
+/* hotels */
 
 #datepicker{
     margin-left: 15px;
@@ -334,7 +584,122 @@ h2 small {
 .clear-condition{
     cursor: pointer;
 }
-.hotel-list{
+
+/* orderList */
+.orderList {
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 15px 25px;
+}
+.orderList h4 i {
+    background: #705F57;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 13px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.orderNav {
+    border-bottom: 3px solid #c8c1b9;
+    margin-right: 3px;
+}
+.orderNav > li {
+    margin-top: 5px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: -3px;
+}
+.orderNav > li > a {
+    margin-right: 0;
+    line-height: 1.42857143;
+    border: 0;
+    border-bottom: 3px solid #c8c1b9;
+    border-radius: 4px 4px 0 0;
+    background: #ffffff;
+}
+.orderNav > li > a span {
+    color: orange;
+}
+.orderNav > li > a:hover {
+    border: 0;
+    border-bottom: 3px solid #705F57;
+    color: #705F57;
+    background: #ffffff;
+    cursor: pointer;
+}
+.orderNav > li.active > a,
+.orderNav > li.active > a:hover,
+.orderNav > li.active > a:focus {
+    color: #705F57;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 3px solid #705F57;
+    cursor: pointer;
+}
+.orderTable {
+    overflow: auto;
+}
+.table {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.table th {
+    white-space: nowrap;
+}
+.table th,.table td {
+    text-align: center;
+}
+.table td {
+    border-bottom: 2px #dddddd solid;
+}
+
+.pager {
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    width: 100px;
+    float: right;
+}
+.pager li {
+    display: inline;
+}
+.pager li > a {
+    display: inline-block;
+    padding: 0 7px;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+.pager li > span{
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #9b9b9b;
+    color: #ffffff;
+    border-radius: 0;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.pager .next > a {
+    float: right;
+}
+.pager .previous > a {
+    float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}.hotel-list{
     margin: 0px 15px;
     padding: 16px;
     background-color: #ffffff;

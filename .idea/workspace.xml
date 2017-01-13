@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b1ad860-37db-41d1-bd08-963c67a9170d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pages/index.css" afterPath="$PROJECT_DIR$/css/pages/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/hotels.html" afterPath="$PROJECT_DIR$/tpl/hotels.html" />
-    </list>
+    <list default="true" id="6b1ad860-37db-41d1-bd08-963c67a9170d" name="Default" comment="" />
     <ignored path="xt_travel.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tvplay (19).jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tvplay (19).jsp" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Application Data/SSH/temp/tvplay (19).jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="289" column="57" selection-start-line="289" selection-start-column="57" selection-end-line="289" selection-end-column="57" />
+            <state relative-caret-position="256">
+              <caret line="552" column="108" selection-start-line="552" selection-start-column="108" selection-end-line="552" selection-end-column="108" />
               <folding>
                 <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -120,11 +115,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iptv720 (11).css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="iptv720 (11).css" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/Application Data/SSH/temp/iptv720 (11).css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="239" column="24" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -194,6 +187,7 @@
         <option value="$USER_HOME$/Application Data/SSH/temp/roomstatus (2).jsp" />
         <option value="$USER_HOME$/Application Data/SSH/temp/index (5).jsp" />
         <option value="$USER_HOME$/Application Data/SSH/temp/tvplay (19).jsp" />
+        <option value="$USER_HOME$/Application Data/SSH/temp/iptv720 (11).css" />
       </list>
     </option>
   </component>
@@ -374,12 +368,10 @@
       <workItem from="1484109279536" duration="5893000" />
       <workItem from="1484122607291" duration="6507000" />
       <workItem from="1484183932257" duration="22462000" />
-      <workItem from="1484270719780" duration="12612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1368" height="735" extended-state="0" />
@@ -779,24 +771,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Application Data/SSH/temp/iptv720 (11).css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="239" column="24" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Application Data/SSH/temp/tvplay (19).jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="289" column="57" selection-start-line="289" selection-start-column="57" selection-end-line="289" selection-end-column="57" />
+        <state relative-caret-position="256">
+          <caret line="552" column="108" selection-start-line="552" selection-start-column="108" selection-end-line="552" selection-end-column="108" />
           <folding>
             <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#2;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#3;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Application Data/SSH/temp/iptv720 (11).css">
+      <provider selected="true" editor-type-id="text-editor">
+          <folding />
         </state>
       </provider>
     </entry>

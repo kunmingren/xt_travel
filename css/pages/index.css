@@ -334,3 +334,93 @@ h2 small {
 .clear-condition{
     cursor: pointer;
 }
+.hotel-list{
+    margin: 0px 15px;
+    padding: 16px;
+    background-color: #ffffff;
+}
+.hotel-img{
+    float: left;
+    padding: 0;
+}
+.item-img{
+    height:209px;
+    width:316px;
+}
+.hotel-item:after{  /*清除浮动*/
+    content: '';
+    display: block;
+    clear: both;
+    margin-bottom: 15px;
+}
+.hotel-msg{
+    height: 209px;
+    float: left;
+    padding: 0;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .item-img{
+        height:180px;
+        width:100%;
+    }
+}
+.item-title{
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #4A4A4A;
+    letter-spacing: -0.55px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+.item-msgleft{
+    display: inline-block;
+    padding: 0;
+}
+.item-msgright{
+    display: inline-block;
+    padding: 0;
+}
+.item-tips{
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: -0.39px;
+}
+.item-msgleft p{
+    margin-bottom: 5px;
+}
+.item-price{
+    font-size: 14px;
+    font-weight: bold;
+}
+.item-detail{
+    display: inline-block;
+    margin-top:90px;
+    background: #705F57;
+    border-radius: 3px;
+    font-family: PingFangSC-Semibold;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: -0.33px;
+    width: 100%;
+    text-align: center;
+    height:35px;
+    line-height: 35px;
+}
+.hotel-detail{
+    padding: 0;
+    margin-top: 15px;
+}
+.hotel-detail ul li{
+
+}
+.hotel-detail .nav-tabs{
+    border-bottom:1px solid #705F57;
+}
+#myTabContent{
+    border-radius:0 0 4px 4px;
+    border-left:1px solid #705F57;
+    border-right:1px solid #705F57;
+    border-bottom:1px solid #705F57;
+}

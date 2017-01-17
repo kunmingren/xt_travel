@@ -8,7 +8,7 @@ $(function () {
         $("#reload").load("tpl/"+$(this).attr("id")+".html");
     });
     //获取地址栏的信息
-    var hash = GetRequest("ctl");
+    var hash = GetRequest();
     if(!hash){
         $("#home").addClass("active").siblings("li").removeClass("active");
         $("#reload").load("tpl/home.html");

@@ -21,15 +21,10 @@ function setCookie(c_name, value, expiredays){
 }
 
 //获取地址栏#后的数据
-function GetRequest(key) {
-    var url = location.search; //获取url中"?"符后的字串
-    var str = url.substr(1);
-    strs = str.split("&");
-    for(var i = 0; i < strs.length; i ++) {
-        if(strs[i].split("=")[0]==key){
-            return strs[i].split("=")[1];
-        }
-    }
+function GetRequest() {
+    var url = location.hash; //#hotels
+    strs = url.split("#");
+    return strs[1]
 }
 
 

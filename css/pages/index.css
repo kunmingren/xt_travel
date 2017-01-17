@@ -583,6 +583,7 @@ fieldset[disabled] .btn-commom.active {
 }
 .clear-condition{
     cursor: pointer;
+    color: #4D8580;
 }
 
 /* orderList */
@@ -777,15 +778,116 @@ fieldset[disabled] .btn-commom.active {
     padding: 0;
     margin-top: 15px;
 }
-.hotel-detail ul li{
-
+.hotel-detail .nav-tabs li a{
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border-radius: 8px 8px 0 0;
+    background: #ffffff;
+    padding: 15px 20px;
+    z-index: 99;
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    color: #29303F;
+    letter-spacing: -0.49px;
+    font-weight: bold;
+    border-color:#DBCBBF #DBCBBF #DBCBBF #DBCBBF;
 }
 .hotel-detail .nav-tabs{
-    border-bottom:1px solid #705F57;
+    border-bottom:1px solid #DBCBBF;
+}
+.hotel-detail .nav-tabs > li.active > a{
+    border-bottom-color:transparent;
 }
 #myTabContent{
-    border-radius:0 0 4px 4px;
-    border-left:1px solid #705F57;
-    border-right:1px solid #705F57;
-    border-bottom:1px solid #705F57;
+    border-radius:0 6px 8px 8px;
+    border-left:1px solid #DBCBBF;
+    border-right:1px solid #DBCBBF;
+    border-bottom:1px solid #DBCBBF;
+    z-index: 100;
+    margin-right: 0px;
+}
+.sub-text{
+    font-size: 14px;
+    color: #d0011b;
+    letter-spacing: 0;
+    font-family: PingFangSC-Semibold;
+}
+.hotels-content a:hover{
+    color: #55acee;
+}
+.room-item{
+    border-bottom: 1px dashed #979797;
+}
+.item-line{
+    height:55px;
+    line-height: 55px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.line-left{
+    float: left;
+}
+.line-right{
+    float: right;
+}
+.reserve{
+    display: inline-block;
+    background: #4D8580;
+    border-radius: 3px;
+    font-family: PingFangSC-Semibold;
+    font-size: 11px;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+    width: 90px;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    margin-left:20px;
+}
+.tab-pane{
+    height:165px;
+}
+#myTab{
+    margin-right: 6px;
+}
+.room-price{
+    font-size: 12px;
+}
+.all-rooms{
+    font-family: PingFangSC-Semibold;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .hotel-detail .nav-tabs li a{
+        padding: 3px;
+        text-align: center;
+    }
+    .nav-tabs > li:first-child{
+        width:110px;
+    }
+    .nav-tabs > li:last-child{
+        width:150px;
+    }
+    .item-line{
+        height: 80px;
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px;
+    }
+    .reserve{
+        margin-left: 10px;
+    }
+    .line-right{
+        float: left;
+    }
+    .tab-pane{
+        height:210px;
+    }
+    .hotel-list{
+        margin-top: 15px;
+    }
 }

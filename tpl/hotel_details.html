@@ -1,0 +1,146 @@
+<div class="container hotel_details">
+    <div class="headbar clearfix">
+        <span class="col-sm-3 col-xs-6">入住日期  <input class="laydate-icon head-input" id="hotel_st" /></span>
+        <span class="col-sm-3 col-xs-6">退房日期  <input class="laydate-icon head-input" id="hotel_ed" /></span>
+        <span class="col-sm-2"><input class="head-input" placeholder="(选填) 酒店名/位置" style="width: 140px;" /></span>
+        <span class="col-sm-1" style="padding-right: 0;">
+            <select class="head-input">
+                <option value="1" selected>1间客房</option>
+                <option value="2">2间客房</option>
+                <option value="3">3间客房</option>
+                <option value="4">4间客房</option>
+                <option value="5">5间客房</option>
+            </select>
+        </span>
+        <span class="col-sm-1">
+            <select class="head-input">
+                <option value="1">1位成人</option>
+                <option value="2" selected>2位成人</option>
+                <option value="3">3位成人</option>
+                <option value="4">4位成人</option>
+                <option value="5">5位成人</option>
+            </select>
+        </span>
+        <span class="col-sm-1"><button class="btn btn-commom head-search">搜索</button></span>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body ticket">
+            <div class="col-xs-12 col-sm-7 ticket_pic no-padding">
+                <div class="col-md-8">
+                    <a href="javascript:;" class="thumbnail">
+                        <img src="http://tour.yz333.cc/public/images/upload/201407/24/17/ae07919cf197b89bfeb7723f189157b778.jpg" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="javascript:;" class="thumbnail">
+                        <img src="http://tour.yz333.cc/public/images/upload/201407/24/17/ae07919cf197b89bfeb7723f189157b778.jpg" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <img src="http://tour.yz333.cc/public/images/upload/201407/24/17/ae07919cf197b89bfeb7723f189157b778.jpg" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 no-padding">
+                <h3 class="hotelName">云可达</h3>
+                <div class="order_btn clearfix paddingTop pull-left">
+                    <div class="spotScore clearfix">
+                        <img src="img/starFull.png">
+                        <img src="img/starFull.png">
+                        <img src="img/starFull.png">
+                        <img src="img/starFull.png">
+                        <img src="img/starEmpty.png">
+                        <span>4.6</span>
+                    </div>
+                </div>
+                <div style="margin-top: 30px; margin-bottom: 30px; color: #aaaaaa;">
+                    <div class="hotelTime">
+                        <div class="col-sm-6 no-padding">入住时间：<span>14：00点以后</span></div>
+                        <div class="col-sm-6 no-padding">离店时间：<span>12：00点以前</span></div>
+                    </div>
+                    <div>地址：<span>西塘景区东大门旁</span></div>
+                    <div>电话：<span>18061937879</span></div>
+                    <div>简介：<span>可达别墅度假酒店，一家综合性的度假酒店</span></div>
+                </div>
+                <div class="hotelFacilities">
+                    <div>
+                        <img src="" />
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs" id="hotelNav">
+            <li class="active" id="hotel"><a><i class="fa fa-bed"></i>单独预定客栈房间</a></li>
+            <li id="hotelTicket"><a><i class="fa fa-bed"></i>+<i class="fa fa-ticket"></i> 客栈预订+西塘景区联票<span class="red">优惠套餐</span></a></li>
+            <li id="hotelComment"><a><i class="fa fa-pencil-square-o"></i>游客点评</a></li>
+        </ul>
+        <div class="box-body hotel" style="padding: 10px;">
+            <table class="table">
+                <tr>
+                    <th>名称</th>
+                    <th>床型</th>
+                    <th>早餐</th>
+                    <th>窗户</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>标准双人房</td>
+                    <td>1.35米*2</td>
+                    <td>无早</td>
+                    <td>有</td>
+                    <td class="red">¥123</td>
+                    <td><button class="btn btn-commom">立即预定</button></td>
+                </tr>
+                <tr>
+                    <td>标准双人房</td>
+                    <td>1.35米*2</td>
+                    <td>无早</td>
+                    <td>有</td>
+                    <td class="red">¥123</td>
+                    <td><button class="btn btn-commom">立即预定</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box-body hotelTicket" style="padding: 10px;">
+            <table class="table">
+                <tr>
+                    <th>套餐名称</th>
+                    <th>房间类型</th>
+                    <th>景区连票张数</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>套餐A</td>
+                    <td>标准双人房(1.35米*2 / 无早 / 有窗户) <span class="red">¥123</span></td>
+                    <td>
+                        <input type="number" value="1" min="1" style="width: 40px;" /> <span class="red">¥123</span>
+                    </td>
+                    <td class="red">¥123</td>
+                    <td><button class="btn btn-commom">立即预定</button></td>
+                </tr>
+                <tr>
+                    <td>套餐A</td>
+                    <td>标准双人房(1.35米*2 / 无早 / 有窗户) <span class="red">¥123</span></td>
+                    <td>
+                        <input type="number" value="1" min="1" style="width: 40px;" /> <span class="red">¥123</span>
+                    </td>
+                    <td class="red">¥123</td>
+                    <td><button class="btn btn-commom">立即预定</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box-body hotelComment">
+
+        </div>
+    </div>
+</div>
+
+<script src="js/pages/hotel_details.js"></script>

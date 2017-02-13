@@ -16,7 +16,7 @@
 
 <!-- tab start -->
 <div class="container">
-    <ul class="tabs">
+    <ul class="tabs" id="homeTabs">
         <li class="col-sm-3 col-xs-12">
             <a class="active" href="javascript:;">票务</a>
         </li>
@@ -34,71 +34,38 @@
 <!-- tab end -->
 
 <!-- content start -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="http://tour.yz333.cc/public/images/upload/201407/25/17/37c701171083fb6c2e01420a0c251a7688.jpg" style="width:360px; height:240px;">
-                <div class="caption clearfix">
-                    <p class="h5 pull-left"><strong>青云山御温泉</strong> 门票5元</p>
-                    <p class="clearfix"><a target="_blank" href="#" class="pull-right btn btn-success" role="button">立即预订</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="http://tour.yz333.cc/public/images/upload/201407/25/09/4cf16fd6f1af2a9db6d6ececc6ae2abc76.jpg" style="width:360px; height:240px;">
-                <div class="caption clearfix">
-                    <p class="h5 pull-left"><strong>鲸奇水乐园</strong> 门票6元</p>
-                    <p class="clearfix"><a target="_blank" href="#" class="pull-right btn btn-success" role="button">立即预订</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="http://tour.yz333.cc/public/images/upload/201407/25/09/4cf16fd6f1af2a9db6d6ececc6ae2abc76.jpg" style="width:360px; height:240px;">
-                <div class="caption clearfix">
-                    <p class="h5 pull-left"><strong>泰宁大金湖</strong> 门票70元</p>
-                    <p class="clearfix"><a target="_blank" href="" class="pull-right btn btn-success" role="button">立即预订</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail_more text-center">
-                <a href="#">更多&gt;</a>
-            </div>
-        </div>
-    </div>
+<div class="container" id="homeSpotsLists">
+
 </div>
 <!-- content end -->
 
 <!-- news start-->
 <div class="news">
     <div class="container text-center">
-        <h2>新闻动态 <small><a href="#">更多&gt;</a></small></h2>
-        <div class="row" style="padding-bottom: 40px;">
-            <div class="media col-md-6 col-sm-12 col-xs-12">
-                <a class="media-left col-sm-6 col-xs-12" href="#">
-                    <img src="http://tour.yz333.cc/web/Tpl/fanwe/zimg/news.png" style="width: 100%; min-width: 200px; max-width: 300px;">
-                </a>
-                <div class="media-body col-sm-6 col-xs-12">
-                    <h4 class="media-heading">新媒体营销助力邮轮旅游发展</h4>
-                    <p>2014-07-16</p>
-                    <p>我国邮轮旅游市场发展现状呼唤高质量营销“邮轮旅游是指旅游者以休闲和娱乐为目的，以集合了星级酒店住宿、餐厅供应以及休闲</p>
-                    <a href="#" class="pull-right btn btn-success" role="button">查看更多</a>
-                </div>
-            </div>
-            <div class="media col-md-6 col-sm-12 col-xs-12" style="margin-top: 0;">
-                <a class="media-left col-sm-6 col-xs-12" href="#">
-                    <img src="http://tour.yz333.cc/web/Tpl/fanwe/zimg/news.png" style="width: 100%; min-width: 200px; max-width: 300px;">
-                </a>
-                <div class="media-body col-sm-6 col-xs-12">
-                    <h4 class="media-heading">新媒体营销助力邮轮旅游发展</h4>
-                    <p>2014-07-16</p>
-                    <p>我国邮轮旅游市场发展现状呼唤高质量营销“邮轮旅游是指旅游者以休闲和娱乐为目的，以集合了星级酒店住宿、餐厅供应以及休闲</p>
-                    <a href="#" class="pull-right btn btn-success" role="button">查看更多</a>
-                </div>
-            </div>
+        <h2>新闻动态 <small><a href="?ctl=newsList">更多&gt;</a></small></h2>
+        <div class="row" style="padding-bottom: 40px;" id="newsList">
+            <!--<div class="media col-md-6 col-sm-12 col-xs-12">-->
+                <!--<a class="media-left col-sm-6 col-xs-12" href="#">-->
+                    <!--<img src="http://tour.yz333.cc/web/Tpl/fanwe/zimg/news.png" style="width: 100%; min-width: 200px; max-width: 300px;">-->
+                <!--</a>-->
+                <!--<div class="media-body col-sm-6 col-xs-12">-->
+                    <!--<h4 class="media-heading">新媒体营销助力邮轮旅游发展</h4>-->
+                    <!--<p>2014-07-16</p>-->
+                    <!--<p>我国邮轮旅游市场发展现状呼唤高质量营销“邮轮旅游是指旅游者以休闲和娱乐为目的，以集合了星级酒店住宿、餐厅供应以及休闲</p>-->
+                    <!--<a href="#" class="pull-right btn btn-success" role="button">查看更多</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="media col-md-6 col-sm-12 col-xs-12" style="margin-top: 0;">-->
+                <!--<a class="media-left col-sm-6 col-xs-12" href="#">-->
+                    <!--<img src="http://tour.yz333.cc/web/Tpl/fanwe/zimg/news.png" style="width: 100%; min-width: 200px; max-width: 300px;">-->
+                <!--</a>-->
+                <!--<div class="media-body col-sm-6 col-xs-12">-->
+                    <!--<h4 class="media-heading">新媒体营销助力邮轮旅游发展</h4>-->
+                    <!--<p>2014-07-16</p>-->
+                    <!--<p>我国邮轮旅游市场发展现状呼唤高质量营销“邮轮旅游是指旅游者以休闲和娱乐为目的，以集合了星级酒店住宿、餐厅供应以及休闲</p>-->
+                    <!--<a href="#" class="pull-right btn btn-success" role="button">查看更多</a>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
@@ -106,8 +73,8 @@
 
 <!-- tips start -->
 <div class="container text-center">
-    <h2>游记攻略 <small><a href="#">更多&gt;</a></small></h2>
-    <div class="row">
+    <h2>游记攻略 <small><a href="?ctl=route">更多&gt;</a></small></h2>
+    <div class="row" id="routeList">
         <div class="col-sm-4 col-md-3">
             <a href="#">
                 <div class="thumbnail">

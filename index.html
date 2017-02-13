@@ -9,16 +9,22 @@
     <meta content="email=no" name="format-detection">
     <title>西塘预订平台</title>
     <link rel="shortcut icon" href="xitang.ico">
+
     <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
     <link rel="stylesheet" href="css/pages/index.css" >
-    <link rel="stylesheet" href="css/jquery-ui.css"/>
-
+    <link rel="stylesheet" href="css/flat/_all.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
     <script src="js/jQuery-2.2.0.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/swiper-3.4.1.jquery.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="plugins/swiper-3.4.1.jquery.min.js"></script>
+    <script src="plugins/jqPaginator.js"></script>
+    <script src="plugins/laydate/laydate.js"></script>
+    <script src="plugins/icheck.min.js"></script>
+
     <script src="js/util.js"></script>
     <script src="js/pages/index.js"></script>
 </head>
@@ -32,7 +38,7 @@
             </div>
             <!-- name-and-slogan -->
             <div class="site-name">
-                <a href="javascript:;">登录</a>  <a href="javascript:;">注册</a>
+                <a href="login.html">登录</a>  <a href="register.html">注册</a>
             </div>
         </div>
     </div>
@@ -52,13 +58,14 @@
                     </button>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse scrollspy smooth-scroll">
+                <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
                     <ul class="nav navbar-nav" id="navBtn">
-                        <li class="active" id="home"><a href="?#home">首页</a></li>
-                        <li id="tickets"><a href="?#tickets">门票</a></li>
-                        <li id="hotels"><a href="?#hotels">酒店</a></li>
-                        <li id="specialty"><a href="?#specialty">特产</a></li>
-                        <li id="route"><a href="?#route">线路</a></li>
+                        <li class="active" id="home"><a href="?ctl=home">首页</a></li>
+                        <li id="tickets"><a href="?ctl=tickets">门票</a></li>
+                        <li id="hotels"><a href="?ctl=hotels">酒店</a></li>
+                        <li id="spots"><a href="?ctl=spots">景点</a></li>
+                        <li id="specialty"><a href="?ctl=specialty">特产</a></li>
+                        <li id="route"><a href="?ctl=route">线路</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="form-group">
@@ -74,6 +81,7 @@
         <!-- navbar end -->
     </div>
     <!-- main-navigation end -->
+
 
     <div id="reload"></div>
 

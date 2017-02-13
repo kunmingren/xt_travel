@@ -5,20 +5,21 @@ var time1,time2;
 $(document).ready(function () {
     
     //登陆切换
-    //短信登陆
-    $(".sms").click(function () {
-        $(".log-common").css("display","none");
-        $(".log-mobile").css("display","block");
-        $(".log-forget").css("display","none");
-        $(".msg1").css("display","none");
-        $(".msg2").css("display","none");
-        $(".msg3").css("display","none");
-        $("input").not(".sendcode").val("")
-    });
+    // //短信登陆
+    // $(".sms").click(function () {
+    //     $(".log-common").css("display","none");
+    //     $(".log-mobile").css("display","block");
+    //     $(".log-forget").css("display","none");
+    //     $(".msg1").css("display","none");
+    //     $(".msg2").css("display","none");
+    //     $(".msg3").css("display","none");
+    //     $("input").not(".sendcode").val("")
+    // });
+
     //普通登陆
     $(".common").click(function () {
         $(".log-common").css("display","block");
-        $(".log-mobile").css("display","none");
+        // $(".log-mobile").css("display","none");
         $(".log-forget").css("display","none");
         $(".msg1").css("display","none");
         $(".msg2").css("display","none");
@@ -36,66 +37,65 @@ $(document).ready(function () {
         $("input").not(".sendcode").val("")
     });
 
-    //短信登陆用户名验证
-    $("#user2").keyup(function () {
-        var phoneNum=$(this).val();
-        if(verifyPhoneNum(phoneNum)){
-            $(".msg2").css("display","none");
-        }else {
-            $(".msg2").html("请输入正确的手机号码！").css("display","block");
-        }
-    });
-
-    //短信登陆验证码
-    $("#code1").click(function () {
-        if($("#code1").attr("class")=="sendcode_d"){
-
-        }else {
-            var phoneNum=$("#user2").val();
-            if(verifyPhoneNum(phoneNum)){
-                var data={
-                    "phoneID":phoneNum
-                };
-                getcode(data);
-                $("#code1").val("重新发送("+60+"s)").removeClass("sendcode").addClass("sendcode_d");
-                var t=60;
-                time1=setInterval(function () {
-                    if(t>0){
-                        t--;
-                        $("#code1").val("重新发送("+t+"s)").removeClass("sendcode").addClass("sendcode_d");
-                    }else {
-                        clearInterval(time1);
-                        $("#code1").val("发送验证码").removeClass("sendcode_d").addClass("sendcode");
-                    }
-                },1000);
-            }else {
-                $(".msg2").html("请输入正确的手机号码！").css("display","block");
-            }
-        }
-    });
-
-    //短信登陆按钮
-    $("#log2").click(function () {
-        var phoneNum=$("#user2").val();
-        if(verifyPhoneNum(phoneNum)){
-            $(".msg2").css("display","none");
-            // var passcode=localStorage.getItem("passcode");
-            var pass=$("#pass2").val();
-            var data={"phone":phoneNum,"code":pass};
-            verifycode(data,function () {
-                $(".msg2").css("display","none");
-                messageLogin(getPhoneInitData(),function(){
-                    layer.msg('登陆成功！', {
-                        time: 1500
-                    }, function(){
-                        window.location.href="../xitang/index.html";
-                    });
-                })
-            });
-        }else {
-            $(".msg2").html("请输入正确的手机号码！").css("display","block");
-        }
-    });
+    // //短信登陆用户名验证
+    // $("#user2").keyup(function () {
+    //     var phoneNum=$(this).val();
+    //     if(verifyPhoneNum(phoneNum)){
+    //         $(".msg2").css("display","none");
+    //     }else {
+    //         $(".msg2").html("请输入正确的手机号码！").css("display","block");
+    //     }
+    // });
+    //
+    // //短信登陆验证码
+    // $("#code1").click(function () {
+    //     if($("#code1").attr("class")=="sendcode_d"){
+    //     }else {
+    //         var phoneNum=$("#user2").val();
+    //         if(verifyPhoneNum(phoneNum)){
+    //             var data={
+    //                 "phoneID":phoneNum
+    //             };
+    //             getcode(data);
+    //             $("#code1").val("重新发送("+60+"s)").removeClass("sendcode").addClass("sendcode_d");
+    //             var t=60;
+    //             time1=setInterval(function () {
+    //                 if(t>0){
+    //                     t--;
+    //                     $("#code1").val("重新发送("+t+"s)").removeClass("sendcode").addClass("sendcode_d");
+    //                 }else {
+    //                     clearInterval(time1);
+    //                     $("#code1").val("发送验证码").removeClass("sendcode_d").addClass("sendcode");
+    //                 }
+    //             },1000);
+    //         }else {
+    //             $(".msg2").html("请输入正确的手机号码！").css("display","block");
+    //         }
+    //     }
+    // });
+    //
+    // //短信登陆按钮
+    // $("#log2").click(function () {
+    //     var phoneNum=$("#user2").val();
+    //     if(verifyPhoneNum(phoneNum)){
+    //         $(".msg2").css("display","none");
+    //         // var passcode=localStorage.getItem("passcode");
+    //         var pass=$("#pass2").val();
+    //         var data={"phone":phoneNum,"code":pass};
+    //         verifycode(data,function () {
+    //             $(".msg2").css("display","none");
+    //             messageLogin(getPhoneInitData(),function(){
+    //                 layer.msg('登陆成功！', {
+    //                     time: 1500
+    //                 }, function(){
+    //                     window.location.href="../xitang/index.html";
+    //                 });
+    //             })
+    //         });
+    //     }else {
+    //         $(".msg2").html("请输入正确的手机号码！").css("display","block");
+    //     }
+    // });
 
     //普通登陆验证
     $("#user1").keyup(function () {
@@ -115,13 +115,12 @@ $(document).ready(function () {
             //后台验证密码
             businessLogin(getInitData(),function(){
                 $(".msg1").css("display","none");
+                localStorage.setItem("phoneNum",phoneNum);
                 layer.msg('登陆成功！', {
-                    time: 1500
+                    time: 1000
                 }, function(){
-                    window.location.href="../xitang/index.html";
+                    window.location.href="index.html";
                 });
-            },function () {
-                $(".msg1").html("密码不正确！").css("display","block");
             });
         }else {
             $(".msg1").html("请输入正确的手机号码！").css("display","block");
@@ -255,8 +254,9 @@ function verifycode(data,fn1) {
 
 function getInitData(){
     var loginInfo={
-        "uname":$("#user1").val(),
-        "pwd":$("#pass1").val()
+        "phone":$("#user1").val(),
+        "pwd":$("#pass1").val(),
+        "action":"login"
     };
     return loginInfo;
 }
@@ -273,20 +273,20 @@ function  businessLogin(loginInfo,fn1){
     }
     $.ajax({
         type: "POST",
-        url: geturl("backend/businessLogin"),
-        data:JSON.stringify(loginInfo),
+        url: geturl("backend/user_login"),
+        data: loginInfo,
         dataType: "json",
         success: function (data) {
-            if (data.rescode == 200) {
-                var info=data.Info;
+            if (data.rescode == 0) {
                 fn1();
-                setCookie("user",info.phone,1);
-                setCookie("userId",info.id,1);
-                localStorage.setItem("role",info.role);
-                localStorage.setItem("businessType",info.businessType);
-                localStorage.setItem("useableTicket",info.useableTicket);
+                // var info=data.Info;
+                // setCookie("user",info.phone,1);
+                // setCookie("userId",info.id,1);
+                // localStorage.setItem("role",info.role);
+                // localStorage.setItem("businessType",info.businessType);
+                // localStorage.setItem("useableTicket",info.useableTicket);
             }else {
-                layer.msg(data.Info, {
+                layer.msg(data.errinfo, {
                     time: 1500
                 });
             }
@@ -295,45 +295,45 @@ function  businessLogin(loginInfo,fn1){
 }
 
 
-function getPhoneInitData(){
-    var loginInfo={
-        "uname":$("#user2").val()
-    };
-    return loginInfo;
-}
-
-function  messageLogin(loginInfo,fn1){
-    if (!loginInfo) {
-        layer.msg("参数错误！",{
-            time:1500
-        });
-        return;
-    }
-    if (!fn1) {
-        return;
-    }
-    $.ajax({
-        type: "POST",
-        url: geturl("backend/messageLogin"),
-        data:JSON.stringify(loginInfo),
-        dataType: "json",
-        success: function (data) {
-            if (data.rescode == 200) {
-                var info=data.Info;
-                fn1();
-                setCookie("user",info.phone,1);
-                setCookie("userId",info.id,1);
-                localStorage.setItem("role",info.role);
-                localStorage.setItem("businessType",info.businessType);
-                localStorage.setItem("useableTicket",info.useableTicket);
-            }else {
-                layer.msg(data.resInfo, {
-                    time: 1500 //按钮
-                });
-            }
-        }
-    });
-}
+// function getPhoneInitData(){
+//     var loginInfo={
+//         "uname":$("#user2").val()
+//     };
+//     return loginInfo;
+// }
+//
+// function  messageLogin(loginInfo,fn1){
+//     if (!loginInfo) {
+//         layer.msg("参数错误！",{
+//             time:1500
+//         });
+//         return;
+//     }
+//     if (!fn1) {
+//         return;
+//     }
+//     $.ajax({
+//         type: "POST",
+//         url: geturl("backend/messageLogin"),
+//         data:JSON.stringify(loginInfo),
+//         dataType: "json",
+//         success: function (data) {
+//             if (data.rescode == 200) {
+//                 var info=data.Info;
+//                 fn1();
+//                 setCookie("user",info.phone,1);
+//                 setCookie("userId",info.id,1);
+//                 localStorage.setItem("role",info.role);
+//                 localStorage.setItem("businessType",info.businessType);
+//                 localStorage.setItem("useableTicket",info.useableTicket);
+//             }else {
+//                 layer.msg(data.resInfo, {
+//                     time: 1500 //按钮
+//                 });
+//             }
+//         }
+//     });
+// }
 
 
 

@@ -100,7 +100,7 @@ $(document).ready(function () {
                                     layer.confirm('恭喜您注册成功！', {
                                         btn: '确定' //按钮
                                     }, function(){
-                                        window.location.href="../xitang/login.html";
+                                        window.location.href="login.html";
                                     });
                                 })
                             }else {
@@ -115,13 +115,8 @@ $(document).ready(function () {
         }else {
             $(".msg").html("请输入正确的手机号码！").css("display","block");
         }
+    });
 
-
-        }
-    );
-
-    //注册验证
-    
 });
 
 
@@ -156,10 +151,11 @@ function verifyPhoneNum(num) {
 function getInitParam(){
 
     var businessInfo={
-        "phone":$("#r_phonenum").val(),
-        "pwd":$("#r_password").val(),
-        "businessType":$("#r_type").val(),
-        "registerCode":$("#registerCode").val()
+        "phone": $("#r_phonenum").val(),
+        "pwd": $("#r_password").val(),
+        "registerName": $("#r_phonenum").val(),
+        "action": "add",
+        "ID_type ": ""
     };
     return businessInfo;
 }
@@ -178,15 +174,14 @@ function register(businessInfo,fn){
     }
     $.ajax({
         type: "POST",
-        url: geturl("backend/businessRegister"),
-        data:JSON.stringify(businessInfo),
+        url: geturl("backend/user"),
+        data: businessInfo,
         dataType: "json",
         success: function (data) {
-            if (data.rescode == 200) {
+            if (data.rescode == 0) {
                 fn();
-            }
-            if(data.rescode == 404){
-                layer.msg(data.errorInfo,{
+            }else{
+                layer.msg(data.errinfo,{
                     time:1500
                 });
             }

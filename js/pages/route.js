@@ -4,6 +4,14 @@
 
 $(function() {
     getPreTravel_guides(initPreTravel_guides);
+    // 分享按钮 初始化
+    var shareBtn = $('.routePage .row.info .blog .blog-detail .socal .social-share');
+    var share = $('.routePage .row.info .blog .blog-detail .socal .socalShare');
+    InitClickShare(shareBtn);
+    share.click(function(event) {
+        /* Act on the event */
+        ClickShare(shareBtn);
+    });
 });
 
 //获取 旅游 线路 
@@ -29,7 +37,6 @@ function getPreTravel_guides(fn) {
 // 初始化，设置 详情页 样式
 function initPreTravel_guides(data) {
     console.log(data)
-        // debugger;
         // 设置 头部内容
     $(".routePage .head.row .banner").css({
         "background-image": "url('" + data.background_pic + "')",
@@ -37,21 +44,18 @@ function initPreTravel_guides(data) {
     $(".routePage .info.row .user-img").css({
         "background-image": "url('" + data.icon_pic + "')",
     });
-
     //  todo  $(".routePage .info.row .blog-description").text(data.des)
     $(".routePage .info.row .blog-description").text("上有天堂，下有西塘");
     $(".routePage .info.row .writer-name").text(data.upPerson);
     $(".routePage .info.row .blog-date").text(data.travel_time);
     $(".routePage .info.row .blog-readCounts span").text(data.readCounts);
     $(".routePage .info.row .socal .thumbUp span").text(data.recommend);
-    // 
-
-    initThumbsUp(data.id,data.recommend);
+    initThumbsUp(data.id, data.recommend);
 }
 
 
 // localstorage 初始化点赞数
-function initThumbsUp(id,rd) {
+function initThumbsUp(id, rd) {
     // debugger;
     // 文章点赞为空时，建立数组
     if (!localStorage.thumbsUp) {
@@ -63,10 +67,10 @@ function initThumbsUp(id,rd) {
         return element.key == id;
     })
     if (!flag) {
-        arrB.push({ key: id, value: 0 ,recommend:rd})
+        arrB.push({ key: id, value: 0, recommend: rd })
     }
     localStorage.thumbsUp = JSON.stringify(arrB);
-    initThisEssayThumbs(id,rd);
+    initThisEssayThumbs(id, rd);
     $('.routePage  .blog-detail .socal .thumbUp').click(function(event) {
         /* Act on the event */
         ClickThumsbUp(id)
@@ -74,8 +78,7 @@ function initThumbsUp(id,rd) {
 
 }
 // 初始化某篇文章是否点赞
-function initThisEssayThumbs(id,rd) {
-    debugger;
+function initThisEssayThumbs(id, rd) {
     var arrA = JSON.parse(localStorage.thumbsUp);
     for (var i = 0; i < arrA.length; i++) {
         if (arrA[i].key == id) {
@@ -94,53 +97,60 @@ function initThisEssayThumbs(id,rd) {
     }
 }
 // 点赞
-function ClickThumsbUp(id,rd) {
-   debugger;
-   var arrA = JSON.parse(localStorage.thumbsUp);
-   var val,action,data,key,count;
-   for (var i = 0; i < arrA.length; i++) {
-       if(arrA[i].key == id){
-         key = i;
-         val = arrA[i].value;
-         count = arrA[i].recommend;
-         if (val == 0) {
-            action = "add";
-            val = 1;
-            count++;
-         } else {
-            action = "reduce";
-            val = 0;
-            if (count > 0) {
-                count--;
+function ClickThumsbUp(id, rd) {
+    var arrA = JSON.parse(localStorage.thumbsUp);
+    var val, action, data, key, count;
+    for (var i = 0; i < arrA.length; i++) {
+        if (arrA[i].key == id) {
+            key = i;
+            val = arrA[i].value;
+            count = arrA[i].recommend;
+            if (val == 0) {
+                action = "add";
+                val = 1;
+                count++;
+            } else {
+                action = "reduce";
+                val = 0;
+                if (count > 0) {
+                    count--;
+                }
             }
-         }
-         data = {
-            travelId: id,
-            action:action
-         };
-         $.ajax({
-             type: "POST",
-             url: geturl("backend/guideRecommendApp"),
-             // todo 
-             data: JSON.stringify(data),
-             dataType: "json",
-             success: function(data) {
-                 if (data.rescode == 200) {
-                    arrA[key].value = val;
-                    arrA[key].recommend = count;
-                    localStorage.thumbsUp = JSON.stringify(arrA);
-                    initThisEssayThumbs(id,count);
-                 }
-             }
-         });
-       }
-   }
+            data = {
+                travelId: id,
+                action: action
+            };
+            $.ajax({
+                type: "POST",
+                url: geturl("backend/guideRecommendApp"),
+                // todo 
+                data: JSON.stringify(data),
+                dataType: "json",
+                success: function(data) {
+                    if (data.rescode == 200) {
+                        arrA[key].value = val;
+                        arrA[key].recommend = count;
+                        localStorage.thumbsUp = JSON.stringify(arrA);
+                        initThisEssayThumbs(id, count);
+                    }
+                }
+            });
+        }
+    }
+}
 
-
-
-
-
-
-
-
+// 分享按钮 初始化
+function InitClickShare(ele) {
+    ele.css({
+        display: 'none'
+    });
+}
+// 点击 显示 分享按钮
+function ClickShare(ele) {
+    var display = ele.css('display');
+    if (display == 'block') {
+        ele.css('display', 'none');
+    } else {
+        ele.css('display', 'block');
+    }
 }

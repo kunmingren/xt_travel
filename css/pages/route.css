@@ -90,4 +90,15 @@
     background:  no-repeat left center;
     padding-left: 30px;
     margin-right:50px;
+    cursor: pointer;
+}
+.routePage .row.info .blog .blog-detail .socal .socalShare {
+    display: inline-block;
+    background: url("../../img/socialShare.png") no-repeat left center;
+    padding-left: 30px;
+    margin-right:50px;
+    cursor: pointer;
+}
+.routePage .row.info .blog .blog-detail .socal .social-share {
+    position: absolute;
 }

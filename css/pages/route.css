@@ -1,0 +1,93 @@
+/* route page */
+
+
+/*banner*/
+
+.routePage .row.head {
+    position: relative;
+}
+
+.routePage .row.head .banner {
+    height: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.routePage .row.head .banner-shadow {
+    height: 65px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+}
+
+
+/*文章信息 上传者 信息*/
+
+.routePage .row.info .user-img {
+    height: 128px;
+    width: 128px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    float: left;
+    margin-left: 100px;
+}
+
+.routePage .row.info {
+    min-height: 130px;
+    position: relative;
+    top: -65px;
+    background-color: transparent;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.routePage .row.info .blog {
+    float: left;
+    height: 130px;
+}
+
+.routePage .row.info .blog .blog-description {
+    color: white;
+    font-size: 24px;
+    background-color: transparent;
+    height: 64px;
+    line-height: 64px;
+}
+
+.routePage .row.info .blog .blog-detail {
+    vertical-align: middle;
+    height: 64px;
+    line-height: 64px;
+}
+
+.routePage .row.info .blog .blog-detail .blog-date {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.routePage .row.info .blog .blog-detail .blog-readCounts {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.routePage .row.info .blog .blog-detail .writer-name {
+    color: #4D8580;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.routePage .row.info .blog .blog-detail .socal {
+    position: absolute;
+    right:0;
+    top:70px;
+}
+
+.routePage .row.info .blog .blog-detail .socal .thumbUp {
+    display: inline-block;
+    /*background: url("../../img/thumbsUp.png") no-repeat left center;*/
+    background:  no-repeat left center;
+    padding-left: 30px;
+    margin-right:50px;
+}

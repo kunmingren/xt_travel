@@ -3,6 +3,7 @@
  */
 
 $(function() {
+    debugger;
     getPreTravel_guides(initPreTravel_guides);
     // 分享按钮 初始化
     var shareBtn = $('.routePage .row.info .blog .blog-detail .socal .social-share');
@@ -37,7 +38,8 @@ function getPreTravel_guides(fn) {
 // 初始化，设置 详情页 样式
 function initPreTravel_guides(data) {
     console.log(data)
-        // 设置 头部内容
+    var jQuerydom = $(".routePage .essaybody.row .bodytext");
+    // 设置 头部内容
     $(".routePage .head.row .banner").css({
         "background-image": "url('" + data.background_pic + "')",
     });
@@ -50,7 +52,28 @@ function initPreTravel_guides(data) {
     $(".routePage .info.row .blog-date").text(data.travel_time);
     $(".routePage .info.row .blog-readCounts span").text(data.readCounts);
     $(".routePage .info.row .socal .thumbUp span").text(data.recommend);
+
+    $(".routePage .essaybody.row .description").text(data.description);
+    $(".routePage .essaybody.row .bodyName").text(data.name);
     initThumbsUp(data.id, data.recommend);
+    initEssayBody(data.travel_guide_detail)
+}
+
+
+// 设置文章主体部分
+function initEssayBody(info) {
+    var dom1 = $(".routePage .essaybody.row .bodytext"),
+        dom2 = $(".routePage .essaybody.row .nav .naviagtion");
+    var html1 = '',
+        html2 = '';
+    for (var i = 0; i < info.length; i++) {
+        html1 += "<div class=‘paragraph’ id='href" + i + "'><h6>" + info[i].day + ' ' + info[i].title + "</h6><div class='img'><img src=" + info[i].material + "></div><div class='des'>" + info[i].description + "</div>";
+        // html2 += "<a class=‘navbar’ href='#href" + i "'>" + info[i].day + ' ' + info[i].title + "</a>";
+        html2 += "<a class='navbar' href='#href" + i + "'>" + info[i].day + ' ' + info[i].title + "</a>";
+    }
+    dom1.html(html1);
+    dom2.html(html2);
+
 }
 
 
@@ -75,7 +98,6 @@ function initThumbsUp(id, rd) {
         /* Act on the event */
         ClickThumsbUp(id)
     });
-
 }
 // 初始化某篇文章是否点赞
 function initThisEssayThumbs(id, rd) {
@@ -138,7 +160,6 @@ function ClickThumsbUp(id, rd) {
         }
     }
 }
-
 // 分享按钮 初始化
 function InitClickShare(ele) {
     ele.css({

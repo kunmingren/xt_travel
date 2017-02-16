@@ -102,3 +102,31 @@
 .routePage .row.info .blog .blog-detail .socal .social-share {
     position: absolute;
 }
+
+.routePage .row.essaybody .fixedDom {
+    position: fixed;
+    top:10px;
+}
+.routePage .essaybody.row .description {
+    text-indent: 50px;
+}
+.routePage .essaybody.row .description::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: url(../../img/quoteA.png) center left no-repeat;
+}
+.routePage .essaybody.row .bodytext .img img{
+    width:100%;
+}
+.routePage .essaybody.row .bodytext .paragraph {
+    margin-top:18px;
+}
+.routePage .essaybody.row .bodytext .des{
+    text-indent: 30px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+

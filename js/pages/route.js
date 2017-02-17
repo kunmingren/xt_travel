@@ -20,6 +20,10 @@ $(function() {
     // 滚动监听函数
     $(document).scroll(function(event) {
         /* Act on the event */
+        // 小于768px的，不固定导航条
+        if($(window).width() < 768) {
+            return;
+        }
         var doc = $(document);
         if (doc.scrollTop() >= top) {
             if (!nav.hasClass('fixedDom')) {

@@ -3,15 +3,34 @@
  */
 
 $(function() {
-    debugger;
+    // debugger;
     getPreTravel_guides(initPreTravel_guides);
     // 分享按钮 初始化
-    var shareBtn = $('.routePage .row.info .blog .blog-detail .socal .social-share');
-    var share = $('.routePage .row.info .blog .blog-detail .socal .socalShare');
+    var shareBtn = $('.routePage .row.info  .socal .social-share');
+    var share = $('.routePage .row.info  .socal .socalShare');
     InitClickShare(shareBtn);
     share.click(function(event) {
         /* Act on the event */
         ClickShare(shareBtn);
+    });
+    var nav = $(".routePage .essaybody.row .nav .naviagtion");
+    // top 必须在函数外获取，不能每次滚动都获取，
+    var top = nav.offset().top + 20;
+
+    // 滚动监听函数
+    $(document).scroll(function(event) {
+        /* Act on the event */
+        var doc = $(document);
+        if (doc.scrollTop() >= top) {
+            if (!nav.hasClass('fixedDom')) {
+                nav.addClass('fixedDom');
+            }
+        } else {
+            if (nav.hasClass('fixedDom')) {
+                nav.removeClass('fixedDom');
+            }
+        }
+
     });
 });
 
@@ -56,23 +75,44 @@ function initPreTravel_guides(data) {
     $(".routePage .essaybody.row .description").text(data.description);
     $(".routePage .essaybody.row .bodyName").text(data.name);
     initThumbsUp(data.id, data.recommend);
-    initEssayBody(data.travel_guide_detail)
+    initEssayBody(data)
 }
 
 
 // 设置文章主体部分
-function initEssayBody(info) {
+function initEssayBody(data) {
+    var info = data.travel_guide_detail;
     var dom1 = $(".routePage .essaybody.row .bodytext"),
         dom2 = $(".routePage .essaybody.row .nav .naviagtion");
     var html1 = '',
-        html2 = '';
+        html2 = "<a href='#href0' class='nav-bar href0 navtitle'>" + data.name + "</a>";
     for (var i = 0; i < info.length; i++) {
-        html1 += "<div class=‘paragraph’ id='href" + i + "'><h6>" + info[i].day + ' ' + info[i].title + "</h6><div class='img'><img src=" + info[i].material + "></div><div class='des'>" + info[i].description + "</div>";
+        html1 += "<div class='paragraph' id='href" + (i + 1) + "'><h6>" + info[i].day + ' ' + info[i].title + "</h6><div class='img'><img src=" + info[i].material + "></div><div class='des'>" + info[i].description + "</div></div>";
         // html2 += "<a class=‘navbar’ href='#href" + i "'>" + info[i].day + ' ' + info[i].title + "</a>";
-        html2 += "<a class='navbar' href='#href" + i + "'>" + info[i].day + ' ' + info[i].title + "</a>";
+        html2 += "<a class='nav-bar navbody " + "href" + (i + 1) + "' href='#href" + (i + 1) + "'>" + info[i].day + ' ' + info[i].title + "</a>";
     }
     dom1.html(html1);
     dom2.html(html2);
+    // 
+    var pags = $(".routePage .essaybody.row .col-md-9 .paragraph");
+    // 文章主体的段落加载完之后再绑定监听事件
+    // 滚动监听函数
+    $(document).scroll(function(event) {
+        /* Act on the event */
+        var doc = $(document);
+        // todo 页面滚动 + 数组遍历，需要修复
+        pags.each(function(index, el) {
+            var el = $(el),
+                top = $(el).offset().top;
+            if ((top - doc.scrollTop() > -20) && (top - doc.scrollTop() < 50)) {
+                var idMark = el.attr('id');
+                $(".routePage .essaybody.row .nav .naviagtion ." + idMark).addClass('active').siblings().removeClass('active');
+
+            }
+        });
+
+    });
+
 
 }
 

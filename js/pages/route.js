@@ -40,9 +40,6 @@ $(function() {
 
     //获取 旅游 线路 
     function getPreTravel_guides(fn) {
-        if (!fn) {
-            return;
-        }
         $.ajax({
             type: "GET",
             url: geturl("backend/preTravel_guides"),

@@ -15,6 +15,7 @@ $(document).ready(function () {
 
 //获取景点数量
 function getSpotsNum(data, fn) {
+    debugger;
     if(!data){
         return;
     }
@@ -34,6 +35,7 @@ function getSpotsNum(data, fn) {
     });
 }
 function initSpotsNum(data){
+    debugger;
     var total = data;
     var visiblePages = 5;
     var totalPages = Math.ceil(total / visiblePages);
@@ -52,6 +54,7 @@ function initSpotsNum(data){
 }
 //获取分页景点
 function getSpots(data, fn) {
+    debugger;
     if(!data){
         return;
     }
@@ -122,6 +125,7 @@ function initSpots(Info){
 }
 
 function spotDetails(obj) {
+    debugger;
     var spotId=obj.attr("spotId");
     location.href="?ctl=spot_details";
     localStorage.setItem("spotId",spotId);

@@ -1,6 +1,81 @@
-/* route page */
+/* 攻略列表 和 攻略详情页 css */
+/*————————————————routlist css——————————————————————————————————*/
+.routeList  .route-list-head {
+    margin:20px 0;
+    font-size:22px;
+    line-height: 30px;
+    padding-left:60px;
+}
+.routeList .list-item-img {
+    width:100%;
+}
+.routeList .upPerson {
+    font-size:12px;
+}
+.routeList .upPerson span{
+    color: rgba(217, 122, 32, 0.93);
+    font-size: 16px;
+    line-height: 22px;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+.routeList .recommend {
+    color: rgba(217, 122, 32, 0.93);
+    border: 1px solid rgba(217, 122, 32, 0.93);
+    width: 130px;
+    height: 20px;
+    border-radius: 1000px;
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: url(../../img/thumbsUp.png) 100px 3px no-repeat;
+}
+.routeList .recommend span {
+    color:#000;
+    display: inline-block;
+    height: 30px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+.routeList .list-item {
+    border-top: 1px solid #D9D9D9;
+    padding-top:10px;
+    margin-top:20px;
+    cursor: pointer;
+}
+.routeList .list-item-title {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4A4A4A;
+}
+.routeList .list-item-body {
+    margin-top:8px;
+}
+.routeList .list-item-readCounts {
+    margin-top:8px;
+}
 
+@media screen and (max-width: 767px) {
+    .route-list>.col-md-3 {
+        display: none;
+    }
+    .routeList .list-item-body>.col-md-9 {
+        margin-top: 10px;
+    }
+    .routeList  .route-list-head {
+        padding-left:30px;
+        margin: 10px 0;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .routeList .list-item:nth-child(1){
+        margin-top: 0;
+    }
+}
 
+/*————————————————route css——————————————————————————————————*/
 /*banner*/
 
 .routePage .row.head {
@@ -256,6 +331,7 @@
         top:65px;
     }
 }
+
 
 
 

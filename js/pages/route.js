@@ -4,7 +4,8 @@
 
 $(function() {
     // debugger;
-    getPreTravel_guides(initPreTravel_guides);
+    var routeId = GetRequest("id");
+    getPreTravel_guides(initPreTravel_guides,routeId);
     // 分享按钮 初始化
     var shareBtn = $('.routePage .row.info  .socal .social-share');
     var share = $('.routePage .row.info  .socal .socalShare');
@@ -37,15 +38,16 @@ $(function() {
         }
 
     });
+    
 
     //获取 旅游 线路 
-    function getPreTravel_guides(fn) {
+    function getPreTravel_guides(fn,routeId) {
         $.ajax({
             type: "GET",
             url: geturl("backend/preTravel_guides"),
             // todo  数据写死
             data: {
-                travel_guide_id: 2
+                travel_guide_id: routeId
             },
             dataType: "json",
             success: function(data) {

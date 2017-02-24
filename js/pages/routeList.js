@@ -28,8 +28,6 @@ $(function() {
             asnyc:true,
             success: function(data) {
                 if (data.rescode == 200) {
-                    debugger;
-                    console.log(data);
                     initListStyle(data.travel_guides);
                     if (isInit) {
                         // pager只加载页面时，初始化一次
@@ -42,7 +40,6 @@ $(function() {
 
     // 初始化，列表样式
     function initListStyle(list) {
-        debugger;
         var len = list.length,html="";
         for (var i = 0; i < len; i++) {
             // html += "<div class='list-item' onclick='routeDetail("+list[i].id+")'>"+
@@ -101,7 +98,6 @@ $(function() {
     }
     // 设置 分页
     function setPager(total){
-        debugger;
         var totalPages = Math.ceil(total/pagerNum);
         $('#route-list-pagination').jqPaginator({
             // todo 
@@ -109,7 +105,6 @@ $(function() {
             visiblePages: 4,
             currentPage: 1,
             onPageChange: function(num, type) {
-              debugger;
               if (type.indexOf('init') == 0) {
                 return;
               }

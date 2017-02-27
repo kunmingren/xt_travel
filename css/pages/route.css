@@ -1,4 +1,4 @@
-/* 攻略列表 和 攻略详情页 css */
+/* 攻略列表 和 攻略详情页 和 新闻列表 css */
 /*————————————————routlist css——————————————————————————————————*/
 .routeList  .route-list-head {
     margin:20px 0;
@@ -329,6 +329,89 @@
     }
     .routePage .row.info .blog .blog-detail .socal {
         top:65px;
+    }
+}
+/*-------------------newList css---------------------------------------------*/
+.newList  .new-list-head {
+    margin: 40px 0 0;
+    font-size:22px;
+    line-height: 30px;
+    color: #000;
+}
+.newList .list-item-img {
+    width:100%;
+}
+.newList .list-item-info {
+    margin-top: 9px;
+    font-size:12px;
+    line-height: 17px;
+    color: #9B9B9B;
+}
+.newList .upPerson {
+    font-size:12px;
+}
+.newList .upPerson span{
+    padding-right: 20px;
+}
+.newList .recommend {
+    color: rgba(217, 122, 32, 0.93);
+    border: 1px solid rgba(217, 122, 32, 0.93);
+    width: 130px;
+    height: 20px;
+    border-radius: 1000px;
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: url(../../img/thumbsUp.png) 100px 3px no-repeat;
+}
+.newList .recommend span {
+    color:#000;
+    display: inline-block;
+    height: 30px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+.newList .list-item {
+    border-top: 1px solid #D9D9D9;
+    padding-top:10px;
+    margin-top:20px;
+    cursor: pointer;
+}
+.newList .list-item-title {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4A4A4A;
+}
+.newList .list-item-body {
+    margin-top:14px;
+}
+.newList .list-item-readCounts {
+    margin-top:8px;
+}
+.newList .list-item .list-item-2imgs {
+    margin-top:10px;
+}
+.newList .list-item .readCounts span {
+    margin-right:8px;
+}
+
+@media screen and (max-width: 767px) {
+    .new-list>.col-md-3 {
+        display: none;
+    }
+    .newList .list-item-body>.col-md-9 {
+        margin-top: 10px;
+    }
+    .newList  .new-list-head {
+        padding-left:30px;
+        margin: 10px 0;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .newList .list-item:nth-child(1){
+        margin-top: 0;
     }
 }
 

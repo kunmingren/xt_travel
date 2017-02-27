@@ -3,7 +3,7 @@
  */
 
 $(function() {
-    debugger;
+    // debugger;
     // “函数内全局的变量”
     // 每页显示 4条
     var pagerNum = 4;
@@ -42,7 +42,6 @@ $(function() {
 
     // 初始化，列表样式
     function initListStyle(list) {
-        console.log(list)
         var len = list.length,html="";
         for (var i = 0; i < len; i++) {
             html += "<div class='list-item' onclick='goToNewDetail("+list[i].id+")'>"+
@@ -68,12 +67,12 @@ $(function() {
             } else if (Object.getOwnPropertyNames(list[i].pic).length == 1){
                 // 一张图片的情况下
                 html +=     "<div class='row list-item-body'>"+
-                                  "<div class='col-md-3'>"+
+                                  "<div class='col-sm-3'>"+
                                   // todo
                                       "<div><img class='list-item-img' src='"+list[i].pic[0]+"'> </div>"+
                                   "</div>"+
 
-                                  "<div class='col-md-9'>"+
+                                  "<div class='col-sm-9'>"+
                                       "<div>"+list[i].descripe+"浏览</div>"+
                                       "<div class='pull-right readCounts'><span class=''>"+list[i].readCounts+"</span>浏览</div>"+
                                   "</div>"+
@@ -119,7 +118,7 @@ $(function() {
 
 });
 // 只能放在全局中，否则页面调用不到
-// 跳转到攻略详情页
+// 跳转到新闻详情页
 function goToNewDetail(id) {
-    location.href="?ctl=route&id="+id;
+    location.href="?ctl=new&id="+id;
 }

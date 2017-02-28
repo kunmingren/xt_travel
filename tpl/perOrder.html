@@ -20,8 +20,9 @@
     <div class="orderMsg">
         <div class="layout">
             <h4><span class="badge">1</span> 套餐信息</h4>
-            <table class="table">
-                <thead>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
                     <tr>
                         <th>酒店名称</th>
                         <th>房型</th>
@@ -31,8 +32,8 @@
                         <th>离店日期</th>
                         <th></th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>允可大酒店</td>
                         <td>标准双床房</td>
@@ -42,36 +43,40 @@
                         <td><input class="laydate-icon head-input" id="orderTime_ed" /></td>
                         <td>共计：<span class="red">¥120</span></td>
                     </tr>
-                </tbody>
-            </table>
-            <table class="table" id="orderTicket">
-                <thead>
-                <tr>
-                    <th>票务名称</th>
-                    <th>数量</th>
-                    <th>日期</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>西塘景区联票</td>
-                    <td>1张</td>
-                    <td><input class="laydate-icon head-input" id="orderTime_t" /></td>
-                    <td>共计：<span class="red">¥50</span></td>
-                </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <table class="table" id="orderTicket">
+                    <thead>
+                    <tr>
+                        <th>票务名称</th>
+                        <th>数量</th>
+                        <th>日期</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>西塘景区联票</td>
+                        <td>1张</td>
+                        <td><input class="laydate-icon head-input" id="orderTime_t" /></td>
+                        <td>共计：<span class="red">¥50</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
             <h4><span class="badge">2</span> 联系人信息</h4>
-            <table style="width: 80%;" class="orderPerson">
-                <tr>
-                    <td>游客姓名：<input type="text" class="head-input" /></td>
-                    <td>身份证号：<input type="text" class="head-input" /></td>
-                    <td>手机号：<input type="text" class="head-input" /></td>
-                </tr>
-                <tr><td colspan="3"><a href="javascript:;" id="addPlayer" style="display: block; height: 40px; line-height: 40px; color: #705f57;"><span class="badge" style=" background: #705f57;">+</span> 增加一名游客</a></td></tr>
-            </table>
-
+            <div class="table-responsive">
+                <table style="width: 80%;" class="orderPerson">
+                    <tr>
+                        <td>游客姓名：<input type="text" class="head-input" /></td>
+                        <td>身份证号：<input type="text" class="head-input" /></td>
+                        <td>手机号：<input type="text" class="head-input" /></td>
+                    </tr>
+                    <tr><td colspan="3"><a href="javascript:;" id="addPlayer" style="display: block; height: 40px; line-height: 40px; color: #705f57;"><span class="badge" style=" background: #705f57;">+</span> 增加一名游客</a></td></tr>
+                </table>
+            </div>
             <div class="orderPay">
                 实付总额:<span class="red">¥170</span>   <button class="btn btn-lg btn-commom">立即下单</button></div>
         </div>

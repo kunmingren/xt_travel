@@ -6,7 +6,7 @@ $(function () {
     //登陆注册/我的订单切换
     var IfLogin=localStorage.getItem("phoneNum");
     if(IfLogin){
-        $(".site-name").html("<div class=''><a href='?ctl=orderList'>我的订单</a>  <a href='javascript:;' onclick='logOut()'>退出</a></div>")
+        $(".site-name").html("<div class=''><a href='?ctl=orders'>我的订单</a>  <a href='javascript:;' onclick='logOut()'>退出</a></div>")
     }else {
         $(".site-name").html("<a href='login.html'>登录</a>  <a href='register.html'>注册</a>")
     }
@@ -28,7 +28,7 @@ $(function () {
     switch(hash)
     {
         case "spot_details":
-        case "orderList":
+        case "orders":
         case "newsList":
         case "hotel_details":
         case "perOrder":

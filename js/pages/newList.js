@@ -19,8 +19,8 @@ $(function() {
             type: "GET",
             // todo 
             // 写死的参数
-            // url: geturl("backend/preTravel_guides"),
-            url: 'https://www.aifavor.com/backend/getPreNoticeList',
+            url: geturl("backend/getPreNoticeList"),
+            // url: 'https://www.aifavor.com/backend/getPreNoticeList',
             dataType: "json",
             data: {
                 // m是页数，n是每页显示数

@@ -14,7 +14,7 @@ $(function () {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
     });
-    getSpots({"category_id":0},initSpots,0);
+    getSpots({"category_id":1},initSpots,1);
     getPreorderCategeories(initPreorderCategeories);
     getNotice(initNotice);
     getTips(initTips)
@@ -84,7 +84,7 @@ function getSpots(data, fn,categoryId) {
     });
 }
 function initSpots(Info,categoryId) {
-    var spotsUrl=['tickets','spots','hotels','specialty'];
+    var spotsUrl=['','spots','hotels','specialty','tickets'];
     $("#homeSpotsLists").html("");
     for (var key in Info){   //=0;key<Info.length; key++
         if(key==5){

@@ -34,6 +34,10 @@ ul li {
     display: block;
 }
 
+.table-responsive {
+    border: 0;
+}
+
 .btn-commom {
     color: #fff;
     background-color: #705F57;
@@ -348,12 +352,13 @@ fieldset[disabled] .btn-commom.active {
     margin: 0 0 30px 0;
 }
 .spotScore * {
+    display: block;
+    float: left;
     width: 15px;
     height: 15px;
-    float: left;
 }
 .spotScore span {
-    color: #F6A623;
+    color: #f6af00;
     width: 30px;
     text-align: center;
     line-height: 16px;
@@ -424,8 +429,135 @@ fieldset[disabled] .btn-commom.active {
 }
 
 
-/* hotels */
+.spotHeader {
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.spotLayout {
+    width: 550px;
+}
+.Scored {
+    color: #f6af00;
+    width: 130px;
+    float: left;
+    margin-top: 20px;
+}
+.Scored p {
+    font-size: 24px;
+}
 
+.Scored .spotScore img {
+    margin: 0;
+}
+
+.spotPgs {
+    width: 220px;
+    float: left;
+    margin: 0 20px;
+}
+.spotPgs .progress {
+    height: 16px;
+    width: 140px;
+    margin: 0 5px;
+    float: left;
+    border-radius: 1px;
+    box-shadow: none;
+}
+.spotPgs .progress .progress-bar {
+    box-shadow: none;
+}
+.spotPgs .spotPgsrow span {
+    float: left;
+}
+
+.spotJudge p {
+    float: left;
+    font-size: 16px;
+    height: 26px;
+    line-height: 27px;
+}
+.spotJudge p span {
+    color: #f0ad4e;
+}
+.visitorJudge {
+    width: 100%;
+    margin: 20px 0;
+}
+.visitorInfo {
+    text-align: center;
+}
+.visitorInfo,.VJudgeDetail {
+    float: left;
+    margin-left: 20px;
+}
+.visitorJudge .visitorInfo {
+    width: 80px;
+}
+.visitorJudge .visitorInfo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0;
+}
+.visitorJudge .VJudgeDetail {
+    border: 2px solid #705f57;
+    width: 78%;
+    border-radius: 3px;
+    padding: 10px;
+}
+.visitorJudge .spotScore img {
+    margin: 0;
+}
+.visitorJudge .spotScore span {
+    width: 100px;
+    color: #705f57;
+}
+.VJudgeDetail>* {
+    margin-bottom: 10px;
+}
+
+.yourJudge {
+    border-top: 1px #DBCBBF solid;
+    width: 100%;
+    padding: 20px;
+}
+.yourJudge div input,.yourJudge div textarea {
+    width: 100%;
+    border: 1px #9b9b9b solid;
+    border-radius: 2px;
+}
+.yourJudge div textarea {
+    height: 100px;
+}
+.yourJudge * {
+    display: block;
+    margin-bottom: 10px;
+}
+#judgeStar {
+    width: 120px;
+    float: left;
+}
+#judgeStar img {
+    float: left;
+    margin: 0;
+}
+#yourStars div {
+    height: 18px;
+    line-height: 26px;
+    margin-left: 57px;
+}
+#yourStars .judgeStar {
+    width: 120px;
+    display: inline-block;
+    margin: 0;
+}
+#yourStars .judgeStar img {
+    float: left;
+    margin: 5px 0;
+}
+
+    /* hotels */
 .hotels .headbar{
     margin-bottom: 20px;
     color: #705F57;
@@ -834,4 +966,16 @@ h4 .badge {
 }
 .orderBtnGroup button:nth-child(1) {
     background: #4d8580;
+}
+
+/*ticket*/
+
+.tickets .panel {
+    margin-top: 20px;
+}
+.tickets .ticketName {
+    margin: 10px 0;
+}
+.tickets .ticketName div  {
+    float: right;
 }

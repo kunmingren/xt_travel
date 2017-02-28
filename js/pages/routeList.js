@@ -17,8 +17,8 @@ $(function() {
         $.ajax({
             type: "GET",
             // todo 
-            // url: geturl("backend/preTravel_guides"),
-            url: 'http://www.aifavor.com/backend/getGuideInfos',
+            url: geturl("backend/getGuideInfos"),
+            // url: 'http://www.aifavor.com/backend/getGuideInfos',
             dataType: "json",
             data: {
                 // m是页数，n是每页显示数

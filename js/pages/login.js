@@ -279,12 +279,6 @@ function  businessLogin(loginInfo,fn1){
         success: function (data) {
             if (data.rescode == 0) {
                 fn1();
-                // var info=data.Info;
-                // setCookie("user",info.phone,1);
-                // setCookie("userId",info.id,1);
-                // localStorage.setItem("role",info.role);
-                // localStorage.setItem("businessType",info.businessType);
-                // localStorage.setItem("useableTicket",info.useableTicket);
             }else {
                 layer.msg(data.errinfo, {
                     time: 1500

@@ -13,8 +13,8 @@ $(function() {
             type: "GET",
             // todo 
             // 写死的参数
-            // url: geturl("backend/preTravel_guides"),
-            url: 'https://www.aifavor.com/backend/getNoticeDetail',
+            url: geturl("backend/getNoticeDetail"),
+            // url: 'https://www.aifavor.com/backend/getNoticeDetail',
             dataType: "json",
             data: {
                 "notice_id": id
